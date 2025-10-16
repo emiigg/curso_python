@@ -1,0 +1,28 @@
+Algoritmo para hacer un sándwich por Diego Axel Contreras Guerrero
+
+1.Reunir los ingredientes:
+	Pan (2 rebanadas)
+	Jamón
+	Queso
+	Lechuga
+	Tomate
+	Mayonesa
+
+2.Reunir los utensilios:
+	Cuchillo
+	Plato
+	Cuchara o tenedor
+
+3.Colocar las dos rebanadas de pan sobre el plato.
+
+4.Untar mayonesa o mostaza en una o ambas rebanadas de pan.
+
+5.Colocar una rebanada de jamón sobre una de las piezas de pan.
+
+6.Poner encima una rebanada de queso.
+
+7.Agregar la lechuga y el tomate (si se quiere).
+
+8.Tapar el sándwich con la otra rebanada de pan.
+
+9.Servir en el plato.
