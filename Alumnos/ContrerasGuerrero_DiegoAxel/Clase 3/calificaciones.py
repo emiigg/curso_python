@@ -38,14 +38,14 @@ while True:
             
             for nombre, materias in calificaciones.items():
                 print(f"\nAlumno: {nombre}")
-                promedio = 0
+                suma = 0
                 n = 0
                 for materia, calificacion in materias.items():
                     print(f"{materia} = {calificacion}")
-                    promedio += calificacion
+                    suma += calificacion
                     n += 1
                 if n > 0:
-                    print(f"Promedio: {promedio/n}")
+                    print(f"Promedio: {suma/n}")
                 else:
                     print("Sin materias registradas")
         else:
