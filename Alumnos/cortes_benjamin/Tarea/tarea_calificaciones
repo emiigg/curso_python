@@ -1,0 +1,52 @@
+calificaciones = {}
+
+
+while True:
+    print("\nOpciones:")
+    print("1. Registrar nuevo alumno")
+    print("2. Registrar calificaciones para un alumno")
+    print("3. Mostrar todas las calificaciones")
+    print("4. Salir")
+    opcion = input("Selecciona una opción (1, 2, 3, 4): ")
+
+    if opcion == "1":
+        nombre = input("Ingresa el nombre del alumno: ")
+        calificaciones[nombre] = {}
+        print("Alumno registrado correctamente")
+
+    elif opcion == "2":
+        nombre = input("Ingresa el nombre del alumno: ")
+        if nombre not in calificaciones:
+            print("Alumno no encontrado.")
+        else:
+            print("Registrando calificaciones para " + nombre)
+            while True:
+                materia = input("Nombre de la materia: ")
+                if materia == "salir":
+                    break
+                calif_mat = float(input(f"Calificación para '{materia}': "))
+
+                calificaciones[nombre][materia] = calif_mat
+                
+           
+            print("Calificacion registrada correctamente")
+    elif opcion == "3":
+        if not calificaciones:
+            print("No hay alumnos registrados.")
+        else:
+            for alumno, materias in calificaciones.items():
+                print(f"\n{alumno}:")
+                total = 0
+                for materia, calificacion in materias.items():
+                    print(f"  {materia}: {calificacion}")
+                    total += calificacion
+                if materias:
+                    promedio = total / len(materias)
+                    print(f"  Promedio: {promedio:.2f}")
+
+    elif opcion == "4":
+        print("¡Hasta luego!")
+        break
+
+    else:
+        print("Opción no válida, intenta de nuevo.")
