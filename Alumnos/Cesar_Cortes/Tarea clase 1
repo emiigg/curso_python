@@ -1,0 +1,22 @@
+Inicio
+  1.	Revisar si hay cafe
+  2.	Encender cafetera.
+  3.	Verificar depósito de agua.
+    o	Si el depósito está vacío -> mostrar "Agrega agua" y detener programa.
+    o	Si tiene agua ->continuar.
+  4.	Medir cantidad de café.
+    o	Colocar cantidad deseada (en cucharadas).
+  5.	Colocar filtro.
+    o	Si hay → continuar.
+  6.	Agregar café al filtro.
+  7.	Colocar jarra vacía en la base.
+  8.	Iniciar preparación.
+    o	Activar calentador de agua.
+    o	Esperar hasta que el agua alcance temperatura de 92 °C.
+    o	Hacer pasar el agua caliente por el filtro hacia la jarra.
+  9.	Esperar hasta que finalice el goteo.
+  10.	Apagar cafetera.
+  11.	Tomar taza vacía
+  12.	Tomar jarra
+  13.	Servir café de la jarra en la taza hasta llenar la taza.
+Fin
