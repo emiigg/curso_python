@@ -43,7 +43,7 @@ def jugar():
                 print("¡Perdiste!")
         
         #except ValueError as ve:
-         #   print("Valor incorrecto: ", ve)
+        #   print("Valor incorrecto: ", ve)
         except Exception as e:
             print(type(e).__name__)
             print("Error desconocido: ", e)
