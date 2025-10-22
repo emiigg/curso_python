@@ -2,16 +2,17 @@ def ahorcado():
     print("Bienvenido al juego del Ahorcado")
     print("--------------------------------------------------------")
     
-    # Jugador 1 ingresa la palabra secreta
+    # Jugador 1 ingresa la palabra a adivinar
     palabra_secreta = input("Jugador 1: Escribe una palabra para adivinar ").lower()
-    #Le da saltos de linea 
-    print("\n" * 10)
+
+    print("\n" * 10) #Samos 10 saltos de linea para que no se vea lo que escribio el jugador 1
+
     print("Palabra guardada con exito\n")
     
-    # Convertimos la palabra en una lista de caracteres
+    # Convertimos la palabra en una lista 
     palabra_lista = list(palabra_secreta)
     
-    # Inicializamos la palabra a adivinar con guiones bajos
+    # Inicializamos la palabra a adivinar con guiones bajos (uno por cada letra)
     palabra_adivinada = ["_" for _ in palabra_lista]
     
     intentos = 6  # Inteentos (Es un intento por cada parte del monito,cabeza,cuerpo,brazo izquierdo,brazo derecho,pierna izquierda y pierna derecha)
