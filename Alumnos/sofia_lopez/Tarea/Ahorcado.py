@@ -4,7 +4,7 @@ def ahorcado():
     
     # Jugador 1 ingresa la palabra secreta
     palabra_secreta = input("Jugador 1: Escribe una palabra para adivinar ").lower()
-    # Limpieza de pantalla (solo estético, se puede comentar si quieres)
+    #Le da saltos de linea 
     print("\n" * 10)
     print("Palabra guardada con exito\n")
     
