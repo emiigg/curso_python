@@ -13,6 +13,7 @@ while True:
         agenda[nombre] = telefono
         print(f"Contacto {nombre} agregado.")
     elif opcion == "2":
+    
         if agenda:
             print("\nContactos en la agenda:")
             for nombre, telefono in agenda.items():

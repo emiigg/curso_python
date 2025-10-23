@@ -10,6 +10,7 @@ numero2 = "2"
 suma2 = numero + int(numero2)
 
 
+
 # Operaciones Aritmeticas
 
 suma = numero + numero2

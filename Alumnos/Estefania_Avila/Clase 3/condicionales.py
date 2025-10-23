@@ -55,6 +55,3 @@ elif edad < mayoria_edad and genero == "M":
     print("Eres un hombre menor de edad")
 elif edad < mayoria_edad and genero == "F":
     print("Eres una mujer menor de edad")
-    
-    
-(not condicion and condicion2) or condicion3 or (condicion4 and condicion5)
