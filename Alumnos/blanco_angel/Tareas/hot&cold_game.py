@@ -163,7 +163,7 @@ def play_game():
     except Exception as e:
         print(f"Ocurrió un error inesperado: {e}")
 
-def main_menu():
+def hot_cold_game():
     while True:
         print("\n=== MENÚ PRINCIPAL ===")
         print("1. Jugar")
@@ -179,5 +179,5 @@ def main_menu():
             break
 
 if __name__ == "__main__":
-    main_menu()
+    hot_cold_game()
 print("-----------------------------------------------------------")
