@@ -1,13 +1,8 @@
-# ====================================
-# MENÚ DE TIENDA 
-# ====================================
 
-# ====================================
 # MENÚ DE TIENDA 
-# ====================================
+# ====================
 
 def crear_inventario():
-    """Usa el archivo inventario, y si no existe, lo crea con encabezados"""
     try:
         archivo = open("inventario.txt", "r", encoding="utf-8")  # intento abrir el inventario
         archivo.close()
@@ -20,9 +15,9 @@ def crear_inventario():
 def agregar_producto():
     crear_inventario()  # me aseguro que exista el inventario antes de agregar
     try:
-        nombre = input("Nombre del producto: ")  # pido nombre
-        precio = float(input("Precio: "))        # pido precio
-        cantidad = int(input("Cantidad: "))      # pido cantidad
+        nombre = input("Nombre del producto: ")  
+        precio = float(input("Precio: "))        
+        cantidad = int(input("Cantidad: "))      
         # agrego el producto al inventario
         with open("inventario.txt", "a", encoding="utf-8") as archivo:
             archivo.write(f"{nombre},{precio},{cantidad}\n")
