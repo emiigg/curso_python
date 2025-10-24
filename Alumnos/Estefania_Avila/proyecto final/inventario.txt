@@ -1,0 +1,4 @@
+Producto,Precio,Cantidad
+Galletas Marias,18.0,21
+Galletas Emperador,22.0,33
+Azucar,26.0,48
