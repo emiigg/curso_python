@@ -12,7 +12,7 @@ def limpiar_pantalla():
 def obtener_palabra():
     try:
         palabras = [
-            "computadora", "avion", "chocolate", "ventana", "montaña", "reforestacion",
+            "python","computadora", "avion", "chocolate", "ventana", "montaña", "reforestacion",
             "ingenieria", "pelicula", "biblioteca", "universidad", "gimnasio",
             "tigre", "familia", "musculo", "robot", "dron", "mazapan", "hablando",
             "carretera", "volcan", "playa", "camioneta", "bosque", "planeta", "cajeta"
