@@ -1,0 +1,30 @@
+# Uso de funciones
+# Manejo de errores
+# Uso de archivos
+
+Adivina el número (frio o caliente):    #1
+    -> Puntaje
+    -> Registrar el puntaje más alto para el jugador
+    -> Mostrarme los puntajes
+    -> Debe pedirme mi usuario para validar puntaje
+
+Control de gastos                       #2
+    -> Registre mis gastos
+    (
+        Comida = 1000
+    )
+    -> Dividir por categoría
+        ->Cuanto he gastado por cateforía
+
+Registro de calificaciones              #3
+    -> Persistencia de datos
+    -> Estadisticas (Cuantos reprobaron, materias más reprobadas, etc)
+
+Menú de restaurante o tienda            #4
+    -> Punto de venta
+    -> Inventario
+    -> Menu para agregar inventario, producto, etc
+    -> Opciones para vender
+        {
+            "galletas":15
+        }
