@@ -1,0 +1,47 @@
+Algoritmos
+Cómo preparar un sándwich.
+1: poner un plato
+2: sacar pan de una bolsa de pan 
+3: poner una rebanada de pan en el plato
+4: abrir el refrigerador
+5: sacar jamon y queso
+6: colocar una rebanada de jamon sobre el pan 
+7: colocar una rebanada queso
+8: sacar otro pan de la bolsa
+9: colocar la otra rebanada de pan sobre el queso 
+10: guardar el jamon y el queso
+11: cerrar el refrigerador
+
+Cómo hacer una taza de café.
+1: tomar una taza vacía 
+2: agarrar la taza 
+3: colocar la taza debajo de un dispensador de agua 
+4: abrir el dispensador
+5: cerrar el dispensador cuando la taza esté casi llena 
+6: abrir la puerta del microondas 
+7: colocar taza de agua en el microondas
+8: cerrar puerta del microondas
+9: marcar 2 minutos 
+10: iniciar calentado 
+11: cuando pasen 2 minutos, abrir puerta del microondas
+12: sacar la taza
+13: cerrar puerta del microondas
+14: añadir café a la taza de agua caliente
+15: introducir una cuchara en la taza 
+16: revolver 
+17: sacar cuchara 
+
+Cómo mandar un mensaje de WhatsApp.
+1: prender celular 
+2: desbloquear celular
+3: abrir whatsapp
+4: buscar contacto deseado
+5: click en el contacto
+6: pulsar barra de texto
+7: escribir mensaje deseado
+8: pulsar botón enviar 
+
+Cómo prender una computadora.
+1: conectar pc a corriente eléctrica
+2: buscar botón de encendido
+3: pulsar botón de encendido
