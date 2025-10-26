@@ -1,0 +1,7 @@
+
+--- Presupuesto semanal de Sofia ---
+comida: $200.00
+transporte: $1000.00
+entretenimiento: $3000.00
+otros: $800.00
+Presupuesto total: $5000.00
