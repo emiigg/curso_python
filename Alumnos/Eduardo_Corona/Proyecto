@@ -1,0 +1,143 @@
+print("----Bienvenido al sistema de registro de gastos----")
+nombre = input("Por favor ingresa tu nombre: ")
+
+categorias = {
+    "comida": 0.0,
+    "transporte": 0.0,
+    "entretenimiento": 0.0,
+    "ahorros": 0.0,
+    "otros": 0.0
+}
+
+archivo = "registro_de_gastos.txt"
+
+while True:
+    print( "Hola " + nombre + ", ¿Qué deseas hacer hoy?")
+    print("[1] Planeación de presupuesto semanal")
+    print("[2] Registrar gastos")
+    print("[3] Ver resumen semanal")
+    print("[4] Salir")
+
+    opcion_input = input("Selecciona una opción (1-4): ")
+    if opcion_input not in ["1", "2", "3", "4"]:
+        print("Opción no válida. Por favor selecciona 1, 2, 3 o 4.")
+        continue
+    opcion = int(opcion_input)
+
+    if opcion == 1:
+        while True:
+            try:
+                presupuesto = float(input("Ingresa tu presupuesto semanal total: "))
+                if presupuesto <= 0:
+                    print("Error: el presupuesto debe ser mayor a 0.")
+                else:
+                    break
+            except ValueError:
+                print("Error: debes ingresar un número válido.")
+
+        print("Tu presupuesto semanal es de:", presupuesto)
+        print("--------Categorias de gastos--------")
+        print("1 [comida]\n2 [transporte]\n3 [entretenimiento]\n4 [ahorros]\n5 [otros]\n6 [Salir]")
+
+        presupuesto_categorias = {}
+        total_asignado = 0  
+
+        while True:
+            opcion_categoria_input = input("Selecciona una categoría para asignar presupuesto (1-6): ")
+            if opcion_categoria_input.isdigit():
+                opcion_categoria = int(opcion_categoria_input)
+                if opcion_categoria == 6:
+                    break
+                elif 1 <= opcion_categoria <= 5:
+                    nombre_categoria = ["comida", "transporte", "entretenimiento", "ahorros", "otros"][opcion_categoria - 1]
+
+                    while True:
+                        try:
+                            monto = float(input(f"Ingrese el presupuesto asignado para {nombre_categoria}: "))
+                            if monto < 0:
+                                print("Error: el monto no puede ser negativo.")
+                            elif total_asignado + monto > presupuesto:
+                                print(f"Error: asignar {monto} excede el presupuesto total de {presupuesto}.")
+                                print(f"Actualmente has asignado {total_asignado}.")
+                            else:
+                                total_asignado += monto
+                                presupuesto_categorias[nombre_categoria] = monto
+                                break
+                        except ValueError:
+                            print("Error: debes ingresar un número válido.")
+                else:
+                    print("Opción no válida. Intenta de nuevo.")
+            else:
+                print("Opción no válida. Ingresa un número entre 1 y 6.")
+
+        print("\nResumen del presupuesto semanal:")
+        for categoria, monto in presupuesto_categorias.items():
+            print(f" - {categoria.capitalize()}: ${monto:.1f}")
+
+        with open(archivo, "a") as f:
+            f.write(f"\n--- El presupuesto semanal de {nombre} ---\n")
+            f.write(f"----Presupuesto total----> ${presupuesto:.1f}\n")
+            for categoria, monto in presupuesto_categorias.items():
+                f.write(f"{categoria}: ${monto:.1f}\n")
+            
+
+        print("\nPresupuesto guardado correctamente.")
+
+    elif opcion == 2:
+        if sum(categorias.values()) == 0:
+            print("\nError: aún no has creado un presupuesto semanal.")
+            print("Por favor selecciona la opción 1 en el menú para planificar tu presupuesto primero.")
+        else:
+            print("\nRegistro de gastos")
+            continuar = "si"
+            while continuar.lower() == "si":
+                while True:
+                    try:
+                        gasto = float(input("Ingresa el monto del gasto: "))
+                        if gasto < 0:
+                            print("Error: el gasto no puede ser negativo.")
+                        else:
+                            break
+                    except ValueError:
+                        print("Error: debes ingresar un número válido.")
+
+                categoria = input("Ingresa la categoría del gasto (comida, transporte, entretenimiento, ahorros, otros): ").lower()
+
+                if categoria in categorias:
+                    categorias[categoria] += gasto
+                    print("Has registrado un gasto de", gasto, "en la categoría de", categoria)
+
+                    with open(archivo, "a") as f:
+                        f.write(f"Gasto registrado: ${gasto:.1f} en {categoria}\n")
+                else:
+                    print("Categoría no válida. Intenta de nuevo.")
+                
+                continuar = input("¿Deseas registrar otro gasto? (si/no): ")
+
+            print("\nResumen de gastos registrados:")
+            for categoria, total in categorias.items():
+                if total > 0:
+                    print(f" - {categoria.capitalize()}: ${total:.1f}")
+
+    elif opcion == 3:
+        print("\nResumen semanal de registros:")
+        try:
+            with open(archivo, "r") as f:
+                lineas = f.readlines()
+
+            if not lineas:
+                print("No hay registros guardados aún.")
+            else:
+                for linea in lineas:
+                    if "Presupuesto semanal" in linea or "Presupuesto total" in linea:
+                        print(linea.strip())
+                for linea in lineas:
+                    if "Gasto registrado" in linea:
+                        print(linea.strip())
+
+        except FileNotFoundError:
+            print("Aún no existe el archivo de registro. Registra un gasto o un presupuesto primero.")
+
+    elif opcion == 4:
+        print("Gracias por usar el sistema. ¡Hasta luego!")
+        break

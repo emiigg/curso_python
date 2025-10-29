@@ -1,0 +1,7 @@
+
+--- El presupuesto semanal de Eduardo ---
+----Presupuesto total----> $1000.0
+comida: $400.0
+transporte: $300.0
+entretenimiento: $150.0
+ahorros: $150.0
